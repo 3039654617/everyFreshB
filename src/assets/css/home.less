@@ -1,0 +1,57 @@
+.home{
+    .menu-list{
+        height: 100%;
+        width: 180px;
+        position: fixed;
+        .ant-menu{
+            height: 100%;
+        }
+    }
+    .main-app{
+        margin-left: 180px;
+        padding: 0 10px;
+        &.collapsed{
+            margin-left: 80px;
+            transition: all .2s linear;
+        }
+        .header::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .header{
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid #eee;
+            .crumbs{
+                margin-left: 10px;
+                .ant-breadcrumb{
+                    display: inline-block;
+                }
+            }
+            .userInfo{
+                float: right;
+                cursor: pointer;
+                text-align: center;
+                li{
+                    height: 23px;
+                }
+                li:not(:first-child){
+                    display: none;
+                    &:hover{
+                        background-color: #eee;
+                        font-weight: 700;
+                        color: #999;
+                    }
+                }
+                &:hover{
+                    li{
+                        line-height: 23px;
+                        transition: all .3s;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
